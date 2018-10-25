@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraController" customModule="Intro_a__CoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGq-ps-cIR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgK-bL-oWq">
+                                <rect key="frame" x="16" y="607" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Cy7-V6-UdU"/>
+                                    <constraint firstAttribute="height" constant="40" id="Zbh-F8-BrG"/>
+                                </constraints>
+                                <state key="normal" image="rotationpng"/>
+                                <connections>
+                                    <action selector="rotateCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aox-bK-0fi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfU-bh-omc">
+                                <rect key="frame" x="157.5" y="577" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2Ey-Oy-T1Z"/>
+                                    <constraint firstAttribute="height" constant="60" id="h3B-Bj-UmU"/>
+                                </constraints>
+                                <state key="normal" image="Camera"/>
+                                <connections>
+                                    <action selector="prendrePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhO-ym-izs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRr-18-WGx">
+                                <rect key="frame" x="319" y="607" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="U3y-Qi-bom"/>
+                                    <constraint firstAttribute="width" constant="40" id="Uea-FB-Bg4"/>
+                                </constraints>
+                                <state key="normal" image="library"/>
+                                <connections>
+                                    <action selector="versLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFF-4z-1g3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="JGq-ps-cIR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="01y-lV-OMC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lRr-18-WGx" secondAttribute="bottom" constant="20" id="D6k-gn-ubM"/>
+                            <constraint firstItem="JGq-ps-cIR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J7L-fX-ORc"/>
+                            <constraint firstItem="xgK-bL-oWq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TGH-iv-1Xp"/>
+                            <constraint firstItem="JGq-ps-cIR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bML-7d-O8e"/>
+                            <constraint firstItem="tfU-bh-omc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cXd-Vy-O6a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xgK-bL-oWq" secondAttribute="bottom" constant="20" id="fHi-qw-qGN"/>
+                            <constraint firstItem="JGq-ps-cIR" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="l4F-z9-e02"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lRr-18-WGx" secondAttribute="trailing" constant="16" id="z3y-z5-Uqa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tfU-bh-omc" secondAttribute="bottom" constant="30" id="zPW-6Y-d5d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraVue" destination="JGq-ps-cIR" id="Cjt-rD-Nke"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Camera" width="70" height="70"/>
+        <image name="library" width="64" height="64"/>
+        <image name="rotationpng" width="64" height="64"/>
+    </resources>
+</document>

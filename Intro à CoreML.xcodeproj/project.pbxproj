@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		080E78DD2112F7BB002849E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080E78DC2112F7BB002849E1 /* AppDelegate.swift */; };
-		080E78DF2112F7BB002849E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080E78DE2112F7BB002849E1 /* ViewController.swift */; };
-		080E78E22112F7BB002849E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080E78E02112F7BB002849E1 /* Main.storyboard */; };
 		080E78E42112F7BC002849E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080E78E32112F7BC002849E1 /* Assets.xcassets */; };
 		080E78E72112F7BC002849E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080E78E52112F7BC002849E1 /* LaunchScreen.storyboard */; };
+		080E78EF2112F895002849E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080E78EE2112F895002849E1 /* Main.storyboard */; };
+		080E78F12112FAB5002849E1 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080E78F02112FAB5002849E1 /* CameraController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		080E78D92112F7BB002849E1 /* Intro à CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intro à CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		080E78DC2112F7BB002849E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		080E78DE2112F7BB002849E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		080E78E12112F7BB002849E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		080E78E32112F7BC002849E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080E78E62112F7BC002849E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		080E78E82112F7BC002849E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080E78EE2112F895002849E1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		080E78F02112FAB5002849E1 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				080E78DC2112F7BB002849E1 /* AppDelegate.swift */,
-				080E78DE2112F7BB002849E1 /* ViewController.swift */,
-				080E78E02112F7BB002849E1 /* Main.storyboard */,
 				080E78E32112F7BC002849E1 /* Assets.xcassets */,
 				080E78E52112F7BC002849E1 /* LaunchScreen.storyboard */,
+				080E78EE2112F895002849E1 /* Main.storyboard */,
 				080E78E82112F7BC002849E1 /* Info.plist */,
+				080E78F02112FAB5002849E1 /* CameraController.swift */,
 			);
 			path = "Intro à CoreML";
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080E78EF2112F895002849E1 /* Main.storyboard in Resources */,
 				080E78E72112F7BC002849E1 /* LaunchScreen.storyboard in Resources */,
 				080E78E42112F7BC002849E1 /* Assets.xcassets in Resources */,
-				080E78E22112F7BB002849E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				080E78DF2112F7BB002849E1 /* ViewController.swift in Sources */,
+				080E78F12112FAB5002849E1 /* CameraController.swift in Sources */,
 				080E78DD2112F7BB002849E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		080E78E02112F7BB002849E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				080E78E12112F7BB002849E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		080E78E52112F7BC002849E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,13 +275,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q3T485N255;
+				DEVELOPMENT_TEAM = R33652Z374;
 				INFOPLIST_FILE = "Intro à CoreML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codabee.Intro-a--CoreML";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.thierry-huu.Intro-a--CoreML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -301,13 +293,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q3T485N255;
+				DEVELOPMENT_TEAM = R33652Z374;
 				INFOPLIST_FILE = "Intro à CoreML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codabee.Intro-a--CoreML";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.thierry-huu.Intro-a--CoreML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
