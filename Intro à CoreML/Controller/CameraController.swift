@@ -21,6 +21,8 @@ class CameraController: UIViewController {
     var imagePicker = UIImagePickerController()
     var imageChoisie: UIImage?
     
+    let segueID = "CoreML"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCamera()
@@ -75,6 +77,14 @@ class CameraController: UIViewController {
         }
         setupCamera()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueID {
+            if let vc = segue.destination as? CoreMLController {
+                vc.image = sender as? UIImage
+            }
+        }
+    }
 }
 
 extension CameraController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -83,7 +93,9 @@ extension CameraController: UIImagePickerControllerDelegate, UINavigationControl
         if let image = info[.originalImage] as? UIImage {
             imageChoisie = image
         }
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true) {
+            self.performSegue(withIdentifier: self.segueID, sender: self.imageChoisie)
+        }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -91,7 +103,6 @@ extension CameraController: UIImagePickerControllerDelegate, UINavigationControl
     }
     
 }
-
 
 extension CameraController: AVCapturePhotoCaptureDelegate {
     
@@ -102,7 +113,8 @@ extension CameraController: AVCapturePhotoCaptureDelegate {
         }
         
         if let data = photo.fileDataRepresentation() {
-            self.imageChoisie = UIImage(data: data)
+            imageChoisie = UIImage(data: data)
+            performSegue(withIdentifier: segueID, sender: imageChoisie)
         } else {
             print("Erreur: le résultat ne m'a pas donné de Data")
         }

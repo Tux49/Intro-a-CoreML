@@ -12,6 +12,7 @@
 		080E78E72112F7BC002849E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080E78E52112F7BC002849E1 /* LaunchScreen.storyboard */; };
 		080E78EF2112F895002849E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080E78EE2112F895002849E1 /* Main.storyboard */; };
 		080E78F12112FAB5002849E1 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080E78F02112FAB5002849E1 /* CameraController.swift */; };
+		2C2BF4F421825896007864B9 /* CoreMLController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BF4F321825896007864B9 /* CoreMLController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		080E78E82112F7BC002849E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		080E78EE2112F895002849E1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		080E78F02112FAB5002849E1 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		2C2BF4F321825896007864B9 /* CoreMLController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		080E78DB2112F7BB002849E1 /* Intro à CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				2C2BF4F521825954007864B9 /* Model */,
+				2C2BF4F62182595C007864B9 /* View */,
+				2C2BF4F721825964007864B9 /* Controller */,
 				080E78DC2112F7BB002849E1 /* AppDelegate.swift */,
 				080E78E32112F7BC002849E1 /* Assets.xcassets */,
 				080E78E52112F7BC002849E1 /* LaunchScreen.storyboard */,
 				080E78EE2112F895002849E1 /* Main.storyboard */,
 				080E78E82112F7BC002849E1 /* Info.plist */,
-				080E78F02112FAB5002849E1 /* CameraController.swift */,
 			);
 			path = "Intro à CoreML";
+			sourceTree = "<group>";
+		};
+		2C2BF4F521825954007864B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C2BF4F62182595C007864B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C2BF4F721825964007864B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				080E78F02112FAB5002849E1 /* CameraController.swift */,
+				2C2BF4F321825896007864B9 /* CoreMLController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			files = (
 				080E78F12112FAB5002849E1 /* CameraController.swift in Sources */,
 				080E78DD2112F7BB002849E1 /* AppDelegate.swift in Sources */,
+				2C2BF4F421825896007864B9 /* CoreMLController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
