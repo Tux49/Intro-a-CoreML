@@ -23,6 +23,7 @@ class CoreMLController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         
         imageView.image = image
         
@@ -48,7 +49,11 @@ class CoreMLController: UIViewController {
     
     func response(_ requete: VNRequest, _ error: Error?) {
         if let resultats = requete.results as? [VNClassificationObservation] {
-            self.results = resultats
+            for resultat in resultats {
+                if Int(resultat.confidence * 100) > 0 {
+                    self.results.append(resultat)
+                }
+            }
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
