@@ -16,9 +16,13 @@ class CoreMLController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var image: UIImage?
+    var results: [VNClassificationObservation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         imageView.image = image
         
@@ -44,9 +48,26 @@ class CoreMLController: UIViewController {
     
     func response(_ requete: VNRequest, _ error: Error?) {
         if let resultats = requete.results as? [VNClassificationObservation] {
-            for resultat in resultats {
-                print("Résultat : " + resultat.identifier + " confiance \(Int(resultat.confidence * 100)) %")
+            self.results = resultats
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
+    }
+}
+
+extension CoreMLController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CoreMLCell") as? TableViewCell {
+            cell.setupCell(results[indexPath.row])
+            return cell
+        }
+        return TableViewCell()
     }
 }
